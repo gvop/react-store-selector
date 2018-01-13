@@ -1,4 +1,4 @@
-import { createStore, returnStore } from '../index';
+import { createStore, returnStore } from '../src/store-selector';
 
 describe('Store Selector HOC', () => {
   it('Should return an empty store at the before createStore is being called', () => {

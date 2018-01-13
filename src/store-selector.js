@@ -7,7 +7,7 @@ let store = {};
  * @return {object}
  */
 
-function returnStore() {
+export function returnStore() {
   return store;
 }
 
@@ -16,7 +16,7 @@ function returnStore() {
  * @param {object} initialStore
  */
 
-function createStore(initialStore) {
+export function createStore(initialStore) {
   store = initialStore;
 }
 
@@ -28,7 +28,7 @@ function createStore(initialStore) {
  * @return {component}
  */
 
-function storeSelector(WrappedComponent, propsArray = [], functions = {}) {
+export function storeSelector(WrappedComponent, propsArray = [], functions = {}) {
   return class HOC extends React.Component {
     constructor() {
       super();
@@ -82,9 +82,3 @@ function storeSelector(WrappedComponent, propsArray = [], functions = {}) {
     }
   };
 }
-
-module.exports = {
-  returnStore,
-  createStore,
-  storeSelector,
-};
