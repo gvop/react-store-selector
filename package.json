@@ -1,13 +1,14 @@
 {
   "name": "@gvop/react-store-selector",
-  "version": "0.0.1-beta.2",
+  "version": "0.0.1-beta.7",
   "description": "Simple React store manager",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "build": "WEBPACK_ENV=build webpack",
+    "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch",
     "test": "jest",
     "lint": "eslint . --color",
-    "format": "npm run lint -- --fix",
-    "publish": "webpack npm publish"
+    "format": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
@@ -26,11 +27,16 @@
     "react": "^16.2.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
     "eslint": "^4.15.0",
+    "eslint-loader": "^1.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
@@ -38,6 +44,7 @@
     "jest": "^22.0.6",
     "path": "^0.12.7",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.10.1"
+    "webpack-dev-server": "^2.10.1",
+    "yargs": "^10.0.3"
   }
 }
