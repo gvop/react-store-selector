@@ -1,6 +1,6 @@
 {
   "name": "@gvop/react-store-selector",
-  "version": "0.1.0",
+  "version": "0.0.1-beta",
   "description": "Simple React store manager",
   "main": "index.js",
   "scripts": {
