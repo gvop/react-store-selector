@@ -17,20 +17,11 @@ const Component = () => (
 describe('Store selector', () => {
   let wrapper;
   let instance;
-  const props = {
-    custom: 'custom',
-    isFocused: true,
-    currentScreen: 'DetailContent',
-  };
+  const props = {};
 
-  function renderContainer(rewriteProps) {
-    const inputProps = {
-      ...props,
-      ...rewriteProps,
-    };
-
+  function renderContainer() {
     const HOC = storeSelector(Component, ['test', 'newValue'], { mockFunction });
-    wrapper = shallow(<HOC {...inputProps} />);
+    wrapper = shallow(<HOC {...props} />);
     instance = wrapper.instance();
   }
 
