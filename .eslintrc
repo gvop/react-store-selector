@@ -1,0 +1,28 @@
+{
+    "extends": "airbnb",
+    "globals": {
+        "document": true,
+        "it": true,
+        "store": true,
+        "describe": true,
+        "expect": true,
+        "beforeEach": true
+    },
+    "rules": {
+        "import/no-named-as-default": "off",
+        "react/no-typos": "off",
+        "react/jsx-filename-extension": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "import/prefer-default-export": "off",
+        "no-multiple-empty-lines": [
+            "error",
+            {
+            "max": 1,
+            "maxEOF": 1
+            }
+        ]
+    }
+}
+
+
+
