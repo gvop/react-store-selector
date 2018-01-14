@@ -6,7 +6,7 @@
   "scripts": {
     "build": "WEBPACK_ENV=build webpack",
     "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch",
-    "test": "jest",
+    "test": "jest && npm run format",
     "lint": "eslint . --color",
     "format": "npm run lint -- --fix"
   },
