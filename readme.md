@@ -47,7 +47,9 @@ export default storeSelector(Component, ['input', 'city']);
 
 ### Adding values to the store 
 
-To add values to the store, you can use the `props.setStoreValue` method that is avalble on the component that is exported with the `storeSelector`
+To add values to the store, you can use the `props.setStoreValue` method that is avalble on the component that is exported with the `storeSelector`.
+
+The first argument is the key, the second argument is the value
 
 ```
 import { storeSelector } from '@gvop/react-store-selector';
@@ -71,6 +73,27 @@ const Form = props => {
 };
 
 export default storeSelector(Form);
+```
+
+### Adding functions to props 
+
+The store doesn't accept a function as value it can store. To connect functions to you component, you can add them as 3th argument in the `storeSelector` method. This function is than accessable as a `prop`.
+
+```
+import { storeSelector } from '@gvop/react-store-selector';
+
+const displayName = () => 'My name'
+
+const Component = props => (
+  <div>
+    <p> Currenlty we are in `${props.store.city}`!
+    <p>
+        { props.displayName() }
+    </p>
+  </div>
+);
+
+export default storeSelector(Component, ['city'], displayName);
 ```
 
 # Testing

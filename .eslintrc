@@ -5,7 +5,8 @@
         "it": true,
         "store": true,
         "describe": true,
-        "expect": true
+        "expect": true,
+        "beforeEach": true
     },
     "rules": {
         "import/no-named-as-default": "off",
