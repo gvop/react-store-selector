@@ -1,8 +1,8 @@
-import { createStore, returnStore } from '../src/store-selector';
+import { createStore, getStore } from '../src/store';
 
-describe('Store Selector HOC', () => {
+describe('Store functions', () => {
   it('Should return an empty store at the before createStore is being called', () => {
-    const initialStore = returnStore();
+    const initialStore = getStore();
     expect(initialStore).toEqual({});
   });
 
@@ -12,7 +12,7 @@ describe('Store Selector HOC', () => {
       data: {},
     };
     createStore(data);
-    const initialStore = returnStore();
+    const initialStore = getStore();
     expect(initialStore).toEqual(data);
   });
 });

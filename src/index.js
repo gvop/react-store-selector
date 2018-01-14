@@ -1,3 +1,5 @@
-import { returnStore, createStore, storeSelector } from './store-selector';
+import { getStore, createStore } from './store';
+import storeSelector from './store-selector-component';
+import types from './utils/store-types';
 
-export { returnStore, createStore, storeSelector };
+export { getStore, createStore, storeSelector, types };
